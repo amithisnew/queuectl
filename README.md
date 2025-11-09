@@ -1,12 +1,14 @@
 # QueueCTL
 
-## CLI Demo (Google Drive)
-Video of working QueueCTL CLI demo here:
-[QueueCTL CLI Demo (Google Drive)](https://drive.google.com/file/d/1nww8hSzZYAwTpHhvMnaFuswoCdNoCm0S/view?usp=sharing)
-
 QueueCTL is a **CLI-based background job queue system** built in Python using SQLite.  
 It supports asynchronous task execution, retries with exponential backoff, and a  
 **Dead Letter Queue (DLQ)** for failed jobs.
+
+---
+
+## CLI Demo (Google Drive)
+Video of working QueueCTL CLI demo here:
+[QueueCTL CLI Demo (Google Drive)](https://drive.google.com/file/d/1nww8hSzZYAwTpHhvMnaFuswoCdNoCm0S/view?usp=sharing)
 
 ---
 
