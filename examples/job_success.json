@@ -1,0 +1,5 @@
+{
+  "id": "demo-success",
+  "command": "echo 'Hello from QueueCTL!'",
+  "max_retries": 3
+}

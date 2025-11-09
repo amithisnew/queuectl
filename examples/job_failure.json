@@ -1,0 +1,5 @@
+{
+  "id": "demo-fail",
+  "command": "bash -c 'exit 1'",
+  "max_retries": 2
+}
