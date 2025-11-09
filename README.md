@@ -23,35 +23,35 @@ It supports asynchronous task execution, retries with exponential backoff, and a
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
+```
 🧩 Usage Overview
-
+```bash
 python -m src.cli init
 python -m src.cli enqueue --file examples/job_success.json
 python -m src.cli worker start --count 1 --limit 1
 python -m src.cli status
-
+```
 Dead Letter Queue
-
+```bash
 python -m src.cli dlq list
 python -m src.cli dlq retry <job_id>
 python -m src.cli dlq delete <job_id>
-
+```
 🧪 DLQ Lifecycle Demo
-
+```bash
 ./scripts/test_dlq.sh
 Performs: Init → Enqueue → Fail → DLQ → Retry → Fail → DLQ → Delete
-
+```
 ⚙️ Quick Demo
-
+```bash
 ./scripts/demo.sh
-
+```
 🧾 Testing
-
+```bash
 pytest -v src/tests/
-
+```
 🏗️ Project Structure
-
+```bash
 queuectl/
 ├── src/
 │   ├── cli.py
@@ -71,3 +71,4 @@ queuectl/
 ├── ARCHITECTURE.md
 ├── requirements.txt
 └── setup.py
+```
