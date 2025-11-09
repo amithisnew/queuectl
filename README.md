@@ -1,9 +1,13 @@
 # QueueCTL
-QueueCTL is a **CLI-based background job queue system** built in Python using SQLite.
-It supports asynchronous task execution, retries with exponential backoff, and a
+
+QueueCTL is a **CLI-based background job queue system** built in Python using SQLite.  
+It supports asynchronous task execution, retries with exponential backoff, and a  
 **Dead Letter Queue (DLQ)** for failed jobs.
 
+---
+
 ## 📦 Features
+
 - Persistent storage via SQLite  
 - Multi-worker parallel execution  
 - Exponential backoff retry logic  
@@ -11,46 +15,43 @@ It supports asynchronous task execution, retries with exponential backoff, and a
 - Configurable runtime parameters  
 - Detailed logging and test coverage  
 
+---
+
 ## 🧰 Setup
-\`\`\`bash
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-\`\`\`
 
-## 🧩 Usage Overview
-\`\`\`bash
+🧩 Usage Overview
+
 python -m src.cli init
 python -m src.cli enqueue --file examples/job_success.json
 python -m src.cli worker start --count 1 --limit 1
 python -m src.cli status
-\`\`\`
 
-## 🪦 Dead Letter Queue
-\`\`\`bash
+Dead Letter Queue
+
 python -m src.cli dlq list
 python -m src.cli dlq retry <job_id>
 python -m src.cli dlq delete <job_id>
-\`\`\`
 
-## 🧪 DLQ Lifecycle Demo
-\`\`\`bash
+🧪 DLQ Lifecycle Demo
+
 ./scripts/test_dlq.sh
-\`\`\`
 Performs: Init → Enqueue → Fail → DLQ → Retry → Fail → DLQ → Delete
 
-## ⚙️ Quick Demo
-\`\`\`bash
+⚙️ Quick Demo
+
 ./scripts/demo.sh
-\`\`\`
 
-## 🧾 Testing
-\`\`\`bash
+🧾 Testing
+
 pytest -v src/tests/
-\`\`\`
 
-## 🏗️ Project Structure
-\`\`\`
+🏗️ Project Structure
+
 queuectl/
 ├── src/
 │   ├── cli.py
@@ -70,4 +71,3 @@ queuectl/
 ├── ARCHITECTURE.md
 ├── requirements.txt
 └── setup.py
-\`\`\`

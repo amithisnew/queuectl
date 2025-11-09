@@ -29,9 +29,9 @@ SQLite WAL mode ensures atomic locks via `BEGIN IMMEDIATE` transactions.
 
 ## 🧾 Logging
 Configurable via:
-\`\`\`bash
+```bash
 python -m src.cli config set log_level DEBUG
-\`\`\`
+```
 
 ## 🧪 Testing
 Unit tests validate enqueue, retry, DLQ, and concurrency behavior.
